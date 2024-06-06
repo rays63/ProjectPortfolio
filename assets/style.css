@@ -5,6 +5,7 @@ body {
 .project-card {
     cursor: pointer;
     transition: transform 0.2s;
+    padding: 20px 20px;
 }
 
 .project-card:hover {
@@ -13,4 +14,10 @@ body {
 
 .modal-body {
     text-align: left;
+}
+
+.card-img-top{
+    height: 250px;
+    width: 90px;
+
 }
