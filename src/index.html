@@ -9,9 +9,12 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">My Portfolio</a>
-        <div class="collapse navbar-collapse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#profile">Profile</a>
@@ -27,8 +30,8 @@
     <section id="profile" class="container mt-5">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h1>My Profile</h1>
-                <p>Welcome to my portfolio. Here you will find some of the projects I have worked on.</p>
+                <h1 class="display-4">My Profile</h1>
+                <p class="lead">Welcome to my portfolio. Here you will find some of the projects I have worked on.</p>
             </div>
         </div>
     </section>
@@ -36,9 +39,14 @@
     <!-- Projects Section -->
     <section id="projects" class="container mt-5">
         <div class="row">
+            <div class="col-md-12 text-center mb-4">
+                <h2 class="display-5">My Projects</h2>
+            </div>
+        </div>
+        <div class="row">
             <!-- Project Card -->
-            <div class="col-md-4">
-                <div class="card project-card" onclick="expandCard(this)">
+            <div class="col-md-4 mb-4">
+                <div class="card project-card shadow-sm" onclick="expandCard(this)">
                     <img src="project1.jpg" class="card-img-top" alt="Project 1">
                     <div class="card-body">
                         <h5 class="card-title">Project 1</h5>
@@ -47,8 +55,8 @@
                 </div>
             </div>
             <!-- Repeat for other projects -->
-            <div class="col-md-4">
-                <div class="card project-card" onclick="expandCard(this)">
+            <div class="col-md-4 mb-4">
+                <div class="card project-card shadow-sm" onclick="expandCard(this)">
                     <img src="project2.jpg" class="card-img-top" alt="Project 2">
                     <div class="card-body">
                         <h5 class="card-title">Project 2</h5>
@@ -56,8 +64,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card project-card" onclick="expandCard(this)">
+            <div class="col-md-4 mb-4">
+                <div class="card project-card shadow-sm" onclick="expandCard(this)">
                     <img src="project3.jpg" class="card-img-top" alt="Project 3">
                     <div class="card-body">
                         <h5 class="card-title">Project 3</h5>
@@ -70,7 +78,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="projectModalLabel">Project Title</h5>
@@ -79,9 +87,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="" id="modalImage" class="img-fluid" alt="Project Image">
+                    <div class="text-center">
+                        <img src="" id="modalImage" class="img-fluid mb-3" alt="Project Image">
+                    </div>
                     <p id="modalDescription"></p>
-                    <p id="modalLanguages"></p>
+                    <p><strong>Languages Used:</strong> <span id="modalLanguages"></span></p>
                 </div>
                 <div class="modal-footer">
                     <a href="#" id="modalGithubLink" class="btn btn-primary" target="_blank">View on GitHub</a>
@@ -95,3 +105,4 @@
     <script src="../assets/scripts.js"></script>
 </body>
 </html>
+ 
